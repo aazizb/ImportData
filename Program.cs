@@ -1,4 +1,5 @@
-﻿using Import.Interface;
+﻿using Import.Context;
+using Import.Interface;
 using Import.Models;
 
 using Microsoft.Extensions.DependencyInjection;
@@ -27,10 +28,17 @@ namespace Import
             {
                 return;
             }
+
             foreach (YamlProduct item in yaml)
             {
                 Console.WriteLine($"importing: name: {item.Name}; Categories: {item.Tags}; Twitter: {item.Twitter}");
             }
+            //in real world we would use EF Core for example to persist the data as shown bellow
+            //using(var context = new ImportDbContext())
+            //{
+            //    context.YamlProducts.AddRange(yaml);
+            //    context.SaveChanges();
+            //}
             #endregion
 
             #region json data import
@@ -50,6 +58,7 @@ namespace Import
                         Title = o.Title,
                         Twitter = o.Twitter
                     }));
+
             foreach (var item in flatten)
             {
                 Console.WriteLine($"importing: name: {item.Title}; Categories: {item.Category}; Twitter: {item.Twitter}");
