@@ -1,4 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Import.Services;
+
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+
+using System.Collections.Generic;
 
 namespace Import.Interface
 {
@@ -8,5 +13,7 @@ namespace Import.Interface
         T DeserializeJson<T>(string jsonContent);
         IList<T> DeserializeYaml<T>(string yamlContent);
         string ReadFileContent(string filePath);
+        IConfiguration Config { get; }
+        ILogger<ImportData> Log { get; }
     }
 }

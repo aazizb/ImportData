@@ -1,5 +1,8 @@
 ﻿using Import.Interface;
 
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,9 +15,18 @@ namespace Import.Services
 {
     public class ImportData : IImportData
     {
+        public ImportData(ILogger<ImportData> log, IConfiguration config)
+        {
+            Log = log;
+            Config = config;
+        }
+  
+        public ILogger<ImportData> Log { get; }
+        public IConfiguration Config { get; }
+
         public T DeserializeCsv<T>(string csvContent)
         {
-            //no implemented
+            //not implemented
             throw new NotImplementedException();
         }
 
@@ -39,9 +51,9 @@ namespace Import.Services
             return results;
         }
 
-        public string ReadFileContent(string filePath)
+        public string ReadFileContent(string fileFullPath)
         {
-            using StreamReader stream = new StreamReader ($@"{filePath}");
+            using StreamReader stream = new StreamReader ($"{fileFullPath}");
             return stream.ReadToEnd();
         }
     }

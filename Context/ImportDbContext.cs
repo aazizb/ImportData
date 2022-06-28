@@ -6,14 +6,10 @@ namespace Import.Context
 {
     public class ImportDbContext: DbContext
     {
-        public DbSet<YamlProduct> YamlProducts { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public ImportDbContext(DbContextOptions<ImportDbContext> options) : base(options)
         {
 
-            //should be stored in a configuration file
-            string connectionString = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=importdb;Integrated Security=True";
-            optionsBuilder.UseSqlServer(connectionString);
-
         }
+        public DbSet<YamlProduct> YamlProducts { get; set; }
     }
 }
