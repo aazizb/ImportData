@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Import", "Import.csproj", "{95332A7A-B4B1-43E8-83CA-B45B9821176D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Import", "Import.csproj", "{95332A7A-B4B1-43E8-83CA-B45B9821176D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportTest", "..\ImportTest\ImportTest.csproj", "{01D96DD5-AAFF-45C4-9D02-3A02D50C205C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{95332A7A-B4B1-43E8-83CA-B45B9821176D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95332A7A-B4B1-43E8-83CA-B45B9821176D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95332A7A-B4B1-43E8-83CA-B45B9821176D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01D96DD5-AAFF-45C4-9D02-3A02D50C205C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D96DD5-AAFF-45C4-9D02-3A02D50C205C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D96DD5-AAFF-45C4-9D02-3A02D50C205C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D96DD5-AAFF-45C4-9D02-3A02D50C205C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
